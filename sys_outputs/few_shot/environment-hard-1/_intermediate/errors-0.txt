@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/Users/eylai/Projects/llm-ds-flow/reference_systems/../sys_outputs/few_shot/environment-hard-1/_intermediate/pipeline-0.py", line 51, in <module>
+    total_precipitation = pd.concat([calculate_total_precipitation(file) for file in precipitation_files], axis=1)
+  File "/Users/eylai/Projects/llm-ds-flow/reference_systems/../sys_outputs/few_shot/environment-hard-1/_intermediate/pipeline-0.py", line 51, in <listcomp>
+    total_precipitation = pd.concat([calculate_total_precipitation(file) for file in precipitation_files], axis=1)
+  File "/Users/eylai/Projects/llm-ds-flow/reference_systems/../sys_outputs/few_shot/environment-hard-1/_intermediate/pipeline-0.py", line 46, in calculate_total_precipitation
+    df = df[df['Year'].between(2002, 2023)] # Filter for the years 2002 to 2023
+  File "/Users/eylai/Projects/llm-ds-flow/.venv/lib/python3.10/site-packages/pandas/core/series.py", line 5638, in between
+    lmask = self >= left
+  File "/Users/eylai/Projects/llm-ds-flow/.venv/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/eylai/Projects/llm-ds-flow/.venv/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/eylai/Projects/llm-ds-flow/.venv/lib/python3.10/site-packages/pandas/core/series.py", line 6119, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/eylai/Projects/llm-ds-flow/.venv/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/eylai/Projects/llm-ds-flow/.venv/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'

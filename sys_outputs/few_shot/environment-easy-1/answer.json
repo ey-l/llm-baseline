@@ -1,0 +1,34 @@
+[
+    {
+        "id": "environment-easy-1",
+        "query": "In 2018, how many bacterial exceedances were observed in freshwater beaches?",
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": 375
+    },
+    {
+        "id": "environment-easy-1-1",
+        "query": "What is the column name for the exceedance indicator?",
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": "Violation"
+    },
+    {
+        "id": "environment-easy-1-2",
+        "query": "How to filter data for freshwater beaches in 2018?",
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": 7641
+    },
+    {
+        "id": "environment-easy-1-3",
+        "query": "How to count exceedance events?",
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": 375
+    }
+]

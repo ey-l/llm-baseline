@@ -1,0 +1,67 @@
+[
+    {
+        "id": "environment-medium-1",
+        "query": "For the freshwater beaches, what is the difference between the percentage exceedance rate in 2023 and the historic average from 2002 to 2022?",
+        "data_sources": [
+            "water-body-testing-2002.csv",
+            "water-body-testing-2003.csv",
+            "water-body-testing-2004.csv",
+            "water-body-testing-2005.csv",
+            "water-body-testing-2006.csv",
+            "water-body-testing-2007.csv",
+            "water-body-testing-2008.csv",
+            "water-body-testing-2009.csv",
+            "water-body-testing-2010.csv",
+            "water-body-testing-2011.csv",
+            "water-body-testing-2012.csv",
+            "water-body-testing-2013.csv",
+            "water-body-testing-2014.csv",
+            "water-body-testing-2015.csv",
+            "water-body-testing-2016.csv",
+            "water-body-testing-2017.csv",
+            "water-body-testing-2018.csv",
+            "water-body-testing-2019.csv",
+            "water-body-testing-2020.csv",
+            "water-body-testing-2021.csv",
+            "water-body-testing-2022.csv",
+            "water-body-testing-2023.csv"
+        ],
+        "answer": 1.6080621176178416
+    },
+    {
+        "id": "environment-medium-1-1",
+        "query": "What is the exceedance rate for freshwater beaches in 2023?",
+        "data_sources": [
+            "water-body-testing-2023.csv"
+        ],
+        "answer": 5.574868031414961
+    },
+    {
+        "id": "environment-medium-1-2",
+        "query": "What is the historic average exceedance rate for freshwater beaches from 2002 to 2022?",
+        "data_sources": [
+            "water-body-testing-2002.csv",
+            "water-body-testing-2003.csv",
+            "water-body-testing-2004.csv",
+            "water-body-testing-2005.csv",
+            "water-body-testing-2006.csv",
+            "water-body-testing-2007.csv",
+            "water-body-testing-2008.csv",
+            "water-body-testing-2009.csv",
+            "water-body-testing-2010.csv",
+            "water-body-testing-2011.csv",
+            "water-body-testing-2012.csv",
+            "water-body-testing-2013.csv",
+            "water-body-testing-2014.csv",
+            "water-body-testing-2015.csv",
+            "water-body-testing-2016.csv",
+            "water-body-testing-2017.csv",
+            "water-body-testing-2018.csv",
+            "water-body-testing-2019.csv",
+            "water-body-testing-2020.csv",
+            "water-body-testing-2021.csv",
+            "water-body-testing-2022.csv"
+        ],
+        "answer": 3.966805913797119
+    }
+]
