@@ -87,6 +87,4 @@ if __name__ == "__main__":
     json_fp = os.path.join(current_dir, '../../LLMBenchmark/workload/environment-hard.json')
     output_dir = os.path.join(current_dir, '../sys_outputs')
     
-
-    
     main(json_fp, data_dir, output_dir)
