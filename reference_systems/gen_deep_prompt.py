@@ -45,7 +45,7 @@ def generate_deep_prompt(question:Question):
     Mark the JSON array with ````json` and ````json` to indicate the start and end of the code block.
 
     Then, provide the corresponding Python code to extract the answer from the data sources. 
-    The data sources you may need to answer the question are: {question.data_sources}
+    The data sources you may need to answer the question are: {question.file_names}
     
     If possible, print the answer (in a JSON format) to each step you provided in the JSON array using the print() function.
     Use "id" as the key to print the answer.
@@ -80,11 +80,16 @@ def main(question_json_fp:str = None, data_dir:str = None, output_dir:str = None
         # Generate the prompt
         prompt = generate_deep_prompt(question)
         print(prompt)
+        # Save the prompt to a file
+        output_fp = os.path.join(output_dir, f"{question.id}.txt")
+        with open(output_fp, 'w') as f:
+            f.write(prompt)
+        print(f"Prompt saved to {output_fp}")
 
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
     data_dir = os.path.join(current_dir, '../../LLMBenchmark/data/environment')
-    json_fp = os.path.join(current_dir, '../../LLMBenchmark/workload/environment-hard.json')
-    output_dir = os.path.join(current_dir, '../sys_outputs')
+    json_fp = os.path.join(current_dir, '../../LLMBenchmark/workload/environment-easy.json')
+    output_dir = os.path.join(current_dir, '../deep_prompts')
     
-    main(json_fp, data_dir, output_dir)
+    prompt = main(json_fp, data_dir, output_dir)
