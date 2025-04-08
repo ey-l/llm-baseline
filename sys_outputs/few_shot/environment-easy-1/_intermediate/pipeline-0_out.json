@@ -1,0 +1,10 @@
+{
+    "environment-easy-1": 375,
+    "environment-easy-1-1": {
+        "Beach Type Description": "Beach Type Description",
+        "Violation": "Violation"
+    },
+    "environment-easy-1-2": {
+        "Exceedance Criteria": "yes in 'Violation' column indicates an exceedance"
+    }
+}

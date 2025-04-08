@@ -1,0 +1,126 @@
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-medium-1/_intermediate/pipeline-0.py:19: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  freshwater_df['Year'] = freshwater_df['Year'].astype(int)

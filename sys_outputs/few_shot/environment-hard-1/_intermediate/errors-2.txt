@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/few_shot/environment-hard-1/_intermediate/pipeline-2.py", line 96, in <module>
+    correlation_coefficient, _ = pearsonr(rainfall_values, exceedence_values)
+  File "/Users/eylai/Projects/llm-baseline/.venv/lib/python3.10/site-packages/scipy/stats/_stats_py.py", line 4552, in pearsonr
+    raise ValueError('`x` and `y` must have length at least 2.')
+ValueError: `x` and `y` must have length at least 2.

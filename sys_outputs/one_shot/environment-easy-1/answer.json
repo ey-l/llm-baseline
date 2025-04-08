@@ -2,41 +2,21 @@
     {
         "id": "environment-easy-1",
         "query": "In 2018, how many bacterial exceedances were observed in freshwater beaches?",
-        "data_sources": [
-            "water-body-testing-2018.csv"
-        ],
-        "answer": 375
+        "data_sources": ["water-body-testing-2018.csv", "precipitations_beaches_community.csv"]
     },
     {
         "id": "environment-easy-1-1",
-        "query": "What is the column name for the year of the test?",
-        "data_sources": [
-            "water-body-testing-2018.csv"
-        ],
-        "answer": "Year"
+        "query": "Which column indicates a bacterial exceedance?",
+        "data_sources": ["water-body-testing-2018.csv"]
     },
     {
         "id": "environment-easy-1-2",
-        "query": "What is the column name for the type of beach?",
-        "data_sources": [
-            "water-body-testing-2018.csv"
-        ],
-        "answer": "Beach Type Description"
+        "query": "Which rows correspond to freshwater beaches?",
+        "data_sources": ["water-body-testing-2018.csv"]
     },
     {
         "id": "environment-easy-1-3",
-        "query": "What is the column name for bacterial exceedance?",
-        "data_sources": [
-            "water-body-testing-2018.csv"
-        ],
-        "answer": "Violation"
-    },
-    {
-        "id": "environment-easy-1-4",
-        "query": "How to handle any missing or malformed data in the necessary columns?",
-        "data_sources": [
-            "water-body-testing-2018.csv"
-        ],
-        "answer": "No answer found."
+        "query": "Which rows are from the year 2018?",
+        "data_sources": ["water-body-testing-2018.csv"]
     }
 ]

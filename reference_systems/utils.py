@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 import json
 import time
+import math
 import subprocess
 
 from openai import OpenAI
@@ -65,6 +66,21 @@ def get_table_string(fp, row_limit = 100):
     except Exception as e:
         print("Error:", e) 
         return ""
+
+def clean_nan(obj):
+    """
+    Convert NaN values to null in a nested structure for strict JSON compliance.
+    :param obj: The JSON object to clean
+    :return: The cleaned JSON object
+    """
+    if isinstance(obj, float) and math.isnan(obj):
+        return None
+    elif isinstance(obj, dict):
+        return {k: clean_nan(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_nan(v) for v in obj]
+    else:
+        return obj
 
 def extract_code(response, pattern=r'```python(.*?)```'):
         """

@@ -22,9 +22,6 @@ class Question:
         file_names = os.listdir(self.data_dir)
         # Filter out non-CSV files
         file_names = [f for f in file_names if f.endswith('.csv')]
-        # TODO: ** This is a temporary fix **
-        # filter out "beaches_community.csv"
-        file_names = [f for f in file_names if f != "beaches_community.csv"]
         return file_names
     
     def __repr__(self):
@@ -227,7 +224,9 @@ class BaselineLLM:
         # Save the printed output of the code execution
         output_fp = os.path.join(self.question_intermediate_dir, f"pipeline-{try_number}_out.json")
         with open(output_fp, 'w') as f:
-            f.write(result.stdout)
+            # Clean NaN values to null for strict JSON compliance
+            stdout = clean_nan(result.stdout)
+            f.write(stdout)
 
         # Save only compile/runtime errors
         error_fp = os.path.join(self.question_intermediate_dir, f"errors-{try_number}.txt")
@@ -269,6 +268,8 @@ class BaselineLLM:
 
         # Save the updated JSON response
         with open(json_fp, 'w') as f:
+            # Clean NaN values to null for strict JSON compliance
+            response = clean_nan(response)
             json.dump(response, f, indent=4)
         print(f"Updated JSON response saved to {json_fp}")
 

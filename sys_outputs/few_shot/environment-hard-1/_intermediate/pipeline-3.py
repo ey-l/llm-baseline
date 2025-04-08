@@ -92,15 +92,19 @@ common_years = set(annual_precipitation.keys()).intersection(exceedence_rate.key
 rainfall_values = [annual_precipitation[year] for year in common_years]
 exceedence_values = [exceedence_rate[year] for year in common_years]
 
-# Calculate the Pearson correlation coefficient
-correlation_coefficient, _ = pearsonr(rainfall_values, exceedence_values)
+# Ensure there are enough data points before calculating the Pearson correlation coefficient
+if len(rainfall_values) >= 2 and len(exceedence_values) >= 2:
+    correlation_coefficient, _ = pearsonr(rainfall_values, exceedence_values)
+else:
+    correlation_coefficient = None
+    print("Not enough data points to calculate Pearson correlation.")
 
 # Prepare the results JSON
 results = {
     "environment-hard-1-1": "The percentage exceedence rate is calculated based on column 'Violation'",
     "environment-hard-1-2": annual_precipitation,
     "environment-hard-1-3": exceedence_rate,
-    "environment-hard-1-4": correlation_coefficient
+    "environment-hard-1-4": correlation_coefficient if correlation_coefficient is not None else "Insufficient data for correlation"
 }
 
 # Print the JSON results

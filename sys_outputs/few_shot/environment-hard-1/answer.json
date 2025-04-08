@@ -3,12 +3,7 @@
         "id": "environment-hard-1",
         "query": "For the marine beaches, what is the Pearson product-moment correlation from 2002 to 2023 between the rainfall amount in inches during the months June, July, August, and September and the percentage exceedence rate?",
         "data_sources": [
-            "monthly_precipitation_chatam.csv",
-            "monthly_precipitation_boston.csv",
-            "monthly_precipitations_ashburnham.csv",
-            "monthly_precipitation_ashburnham.csv",
-            "monthly_precipitations_amherst.csv",
-            "monthly_precipitations_chatam.csv",
+            "precipitations_beaches_community.csv",
             "monthly_precipitations_boston.csv",
             "water-body-testing-2015.csv",
             "water-body-testing-2014.csv",
@@ -16,7 +11,6 @@
             "water-body-testing-2002.csv",
             "water-body-testing-2003.csv",
             "water-body-testing-2017.csv",
-            "water-body-testing.csv",
             "water-body-testing-2013.csv",
             "water-body-testing-2007.csv",
             "water-body-testing-2006.csv",
@@ -34,11 +28,119 @@
             "water-body-testing-2019.csv",
             "water-body-testing-2018.csv"
         ],
-        "answer": 0.3354078666815357
+        "answer": NaN
     },
     {
         "id": "environment-hard-1-1",
-        "query": "What columns contain the marine beach data and percentage exceedence rate?",
+        "query": "Which communities are associated with marine beaches in the precipitation data?",
+        "data_sources": [
+            "precipitations_beaches_community.csv"
+        ],
+        "answer": [
+            " Boston",
+            " Chatham"
+        ]
+    },
+    {
+        "id": "environment-hard-1-2",
+        "query": "What is the annual sum of rainfall from June to September for Boston from 2002 to 2023?",
+        "data_sources": [
+            "monthly_precipitations_boston.csv"
+        ],
+        "answer": [
+            {
+                "Year": "2002",
+                "Summer_Rainfall": 11.71
+            },
+            {
+                "Year": "2003",
+                "Summer_Rainfall": 9.45
+            },
+            {
+                "Year": "2004",
+                "Summer_Rainfall": 17.64
+            },
+            {
+                "Year": "2005",
+                "Summer_Rainfall": 9.49
+            },
+            {
+                "Year": "2006",
+                "Summer_Rainfall": 18.59
+            },
+            {
+                "Year": "2007",
+                "Summer_Rainfall": 9.85
+            },
+            {
+                "Year": "2008",
+                "Summer_Rainfall": 20.38
+            },
+            {
+                "Year": "2009",
+                "Summer_Rainfall": 16.45
+            },
+            {
+                "Year": "2010",
+                "Summer_Rainfall": 13.39
+            },
+            {
+                "Year": "2011",
+                "Summer_Rainfall": 18.94
+            },
+            {
+                "Year": "2012",
+                "Summer_Rainfall": 15.77
+            },
+            {
+                "Year": "2013",
+                "Summer_Rainfall": 18.16
+            },
+            {
+                "Year": "2014",
+                "Summer_Rainfall": 9.64
+            },
+            {
+                "Year": "2015",
+                "Summer_Rainfall": 13.22
+            },
+            {
+                "Year": "2016",
+                "Summer_Rainfall": 5.3
+            },
+            {
+                "Year": "2017",
+                "Summer_Rainfall": 14.19
+            },
+            {
+                "Year": "2018",
+                "Summer_Rainfall": 17.28
+            },
+            {
+                "Year": "2019",
+                "Summer_Rainfall": 16.6
+            },
+            {
+                "Year": "2020",
+                "Summer_Rainfall": 7.86
+            },
+            {
+                "Year": "2021",
+                "Summer_Rainfall": 27.11
+            },
+            {
+                "Year": "2022",
+                "Summer_Rainfall": 7.02
+            },
+            {
+                "Year": "2023",
+                "Summer_Rainfall": 24.08
+            }
+        ]
+    },
+    {
+        "id": "environment-hard-1-3",
+        "query": "What is the percentage exceedence rate for marine beaches from 2002 to 2023?",
         "data_sources": [
             "water-body-testing-2015.csv",
             "water-body-testing-2014.csv",
@@ -46,7 +148,6 @@
             "water-body-testing-2002.csv",
             "water-body-testing-2003.csv",
             "water-body-testing-2017.csv",
-            "water-body-testing.csv",
             "water-body-testing-2013.csv",
             "water-body-testing-2007.csv",
             "water-body-testing-2006.csv",
@@ -64,29 +165,29 @@
             "water-body-testing-2019.csv",
             "water-body-testing-2018.csv"
         ],
-        "answer": [
-            "Beach Type Description",
-            "Violation"
-        ]
-    },
-    {
-        "id": "environment-hard-1-2",
-        "query": "How to clean and process precipitation data to get monthly total rainfall for June to September?",
-        "data_sources": [
-            "monthly_precipitation_chatam.csv",
-            "monthly_precipitation_boston.csv",
-            "monthly_precipitations_ashburnham.csv",
-            "monthly_precipitation_ashburnham.csv",
-            "monthly_precipitations_amherst.csv",
-            "monthly_precipitations_chatam.csv",
-            "monthly_precipitations_boston.csv"
-        ],
-        "answer": "Clean precipitation data and aggregate June, July, August, and September values for 2002-2023."
-    },
-    {
-        "id": "environment-hard-1-3",
-        "query": "What is the correlation between rainfall and exceedence rate for marine beaches?",
-        "data_sources": [],
-        "answer": 0.3354078666815357
+        "answer": {
+            "2002": 5.88235294117647,
+            "2003": 3.997093023255814,
+            "2004": 4.114009142242538,
+            "2005": 4.244306418219462,
+            "2006": 4.373683558419031,
+            "2007": 3.096099718536389,
+            "2008": 5.388420911886616,
+            "2009": 6.749622926093514,
+            "2010": 5.6494260286340765,
+            "2011": 5.626089121234752,
+            "2012": 4.101856497742097,
+            "2013": 5.705445544554456,
+            "2014": 4.181138124499065,
+            "2015": 4.847731510254817,
+            "2016": 3.4661606578115114,
+            "2017": 4.097835830452042,
+            "2018": 4.9874371859296485,
+            "2019": 6.069256547101899,
+            "2020": 5.126964933494558,
+            "2021": 7.903494176372712,
+            "2022": 5.383515959980943,
+            "2023": 8.008479566599929
+        }
     }
 ]

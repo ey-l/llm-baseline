@@ -4,77 +4,74 @@ import numpy as np
 import json
 from scipy.stats import pearsonr
 
-# Define file paths
-precipitation_files = [
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitation_chatam.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitation_boston.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitations_ashburnham.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitation_ashburnham.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitations_amherst.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitations_chatam.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitations_boston.csv'
+# Step 1: Identify which communities are associated with marine beaches
+precip_communities_df = pd.read_csv("/Users/eylai/Projects/llm-baseline/reference_systems/../../LLMBenchmark/data/environment/precipitations_beaches_community.csv")
+marine_communities = precip_communities_df[precip_communities_df['Beach Type'] == 'Marine']['Community'].tolist()
+
+# Print answer for environment-hard-1-1
+answer1 = marine_communities
+
+# Step 2: Calculate the sum of rainfall from June to September for Boston from 2002 to 2023
+boston_precip_df = pd.read_csv("/Users/eylai/Projects/llm-baseline/reference_systems/../../LLMBenchmark/data/environment/monthly_precipitations_boston.csv")
+
+# Filter for years 2002-2023
+boston_precip_df = boston_precip_df[pd.to_numeric(boston_precip_df['Year'], errors='coerce').between(2002, 2023)]
+
+# Calculate the sum for specified months
+boston_precip_df[['Jun', 'Jul', 'Aug', 'Sep']] = boston_precip_df[['Jun', 'Jul', 'Aug', 'Sep']].apply(pd.to_numeric, errors='coerce')
+boston_precip_df['Summer_Rainfall'] = boston_precip_df[['Jun', 'Jul', 'Aug', 'Sep']].sum(axis=1)
+
+# Print answer for environment-hard-1-2
+answer2 = json.loads(boston_precip_df[['Year', 'Summer_Rainfall']].to_json(orient='records'))
+
+# Step 3: Calculate the percentage exceedence rate for each year for marine beaches from 2002 to 2023
+water_body_files = [
+    "water-body-testing-2015.csv", "water-body-testing-2014.csv", 
+    "water-body-testing-2016.csv", "water-body-testing-2002.csv",
+    "water-body-testing-2003.csv", "water-body-testing-2017.csv",
+    "water-body-testing-2013.csv", "water-body-testing-2007.csv",
+    "water-body-testing-2006.csv", "water-body-testing-2012.csv",
+    "water-body-testing-2004.csv", "water-body-testing-2010.csv",
+    "water-body-testing-2011.csv", "water-body-testing-2005.csv",
+    "water-body-testing-2020.csv", "water-body-testing-2008.csv",
+    "water-body-testing-2009.csv", "water-body-testing-2021.csv",
+    "water-body-testing-2023.csv", "water-body-testing-2022.csv",
+    "water-body-testing-2019.csv", "water-body-testing-2018.csv"
 ]
 
-water_testing_files = [
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2015.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2014.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2016.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2002.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2003.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2017.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2013.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2007.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2006.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2012.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2004.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2010.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2011.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2005.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2020.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2008.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2009.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2021.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2023.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2022.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2019.csv',
-    '/Users/eylai/Projects/llm-ds-flow/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2018.csv'
-]
+dataframes = []
+for file in water_body_files:
+    df = pd.read_csv(f"/Users/eylai/Projects/llm-baseline/reference_systems/../../LLMBenchmark/data/environment/{file}")
+    df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
+    df = df[df['Beach Type Description'] == 'Marine']
+    df = df[df['Year'].between(2002, 2023)]
+    df['Violation'] = df['Violation'].str.lower().map({'yes': True, 'no': False})
+    dataframes.append(df)
 
-# Define function to calculate total precipitation from June to September
-def calculate_total_precipitation(file):
-    df = pd.read_csv(file)
-    df['Year'] = pd.to_numeric(df['Year'], errors='coerce') # Convert 'Year' to a numeric type, setting errors to NaN
-    df = df[df['Year'].between(2002, 2023)] # Filter for the years 2002 to 2023
-    df['TotalRainfall_JuneSep'] = df[['Jun', 'Jul', 'Aug', 'Sep']].replace('M', np.nan).astype(float).sum(axis=1)
-    return df.set_index('Year')['TotalRainfall_JuneSep']
+marine_df = pd.concat(dataframes, ignore_index=True)
+violation_rates = marine_df.groupby('Year')['Violation'].mean().multiply(100)  # Percentage of exceedence
 
-# Collect precipitation data
-total_precipitation = pd.concat([calculate_total_precipitation(file) for file in precipitation_files], axis=1)
-total_precipitation.fillna(total_precipitation.mean(axis=1), inplace=True) # Fill NaN with the row mean
-total_precipitation_mean = total_precipitation.mean(axis=1)
+# Print answer for environment-hard-1-3
+answer3 = violation_rates.to_dict()
 
-# Define function to calculate exceedence rate
-def calculate_exceedence_rate(file):
-    df = pd.read_csv(file)
-    marine_beaches = df[df['Beach Type Description'] == 'Marine']
-    exceedence_rate = marine_beaches.groupby('Year')['Violation'].apply(lambda x: (x == 'yes').sum() / len(x))
-    return exceedence_rate
+# Step 4: Calculate Pearson correlation
+# Ensure rainfall and violation_rates are numeric
+rainfall = pd.to_numeric(boston_precip_df.set_index('Year')['Summer_Rainfall'], errors='coerce')
+violation_rates = pd.to_numeric(violation_rates.reindex(rainfall.index), errors='coerce')  # Align indices
 
-# Collect exceedence rate data
-exceedence_rate = pd.concat([calculate_exceedence_rate(file) for file in water_testing_files], axis=0).groupby('Year').mean()
+# Calculate the Pearson correlation coefficient
+correlation, _ = pearsonr(rainfall, violation_rates)
 
-# Calculate correlation
-common_years = total_precipitation_mean.index.intersection(exceedence_rate.index)
-corr, _ = pearsonr(total_precipitation_mean.loc[common_years], exceedence_rate.loc[common_years])
+# Print answer for environment-hard-1
+answer = correlation
 
+# Print all answers
 print(json.dumps(
     {
-        "environment-hard-1-1": ["Beach Type Description", "Violation"],
-        "environment-hard-1-2": "Clean precipitation data and aggregate June, July, August, and September values for 2002-2023.",
-        "environment-hard-1-3": corr,
-        "environment-hard-1": corr
-    },
-    indent=4
+        "environment-hard-1-1": answer1, 
+        "environment-hard-1-2": answer2, 
+        "environment-hard-1-3": answer3,
+        "environment-hard-1": answer
+    }, indent=4
 ))
-````
+````python`

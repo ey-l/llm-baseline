@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 import json
 import os
@@ -64,4 +63,3 @@ print(json.dumps({
     "environment-medium-1-4": {'2023': rate_2023},
     "environment-medium-1": difference
 }, indent=4))
-```

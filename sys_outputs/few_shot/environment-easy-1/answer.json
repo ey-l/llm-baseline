@@ -9,26 +9,23 @@
     },
     {
         "id": "environment-easy-1-1",
-        "query": "What is the column name for the exceedance indicator?",
+        "query": "What columns indicate the type of beach and bacterial exceedances?",
         "data_sources": [
             "water-body-testing-2018.csv"
         ],
-        "answer": "Violation"
+        "answer": {
+            "Beach Type Description": "Beach Type Description",
+            "Violation": "Violation"
+        }
     },
     {
         "id": "environment-easy-1-2",
-        "query": "How to filter data for freshwater beaches in 2018?",
+        "query": "What is considered a bacterial exceedance in the dataset?",
         "data_sources": [
             "water-body-testing-2018.csv"
         ],
-        "answer": 7641
-    },
-    {
-        "id": "environment-easy-1-3",
-        "query": "How to count exceedance events?",
-        "data_sources": [
-            "water-body-testing-2018.csv"
-        ],
-        "answer": 375
+        "answer": {
+            "Exceedance Criteria": "yes in 'Violation' column indicates an exceedance"
+        }
     }
 ]
