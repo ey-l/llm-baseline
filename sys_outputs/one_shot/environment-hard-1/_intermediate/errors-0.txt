@@ -1,0 +1,314 @@
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Year'] = pd.to_datetime(df_marine['Sample Date']).dt.year
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:30: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_marine['Violation'] = df_marine['Violation'].apply(lambda x: str(x).lower() == 'yes')
+/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py:31: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  exceedance_by_year = df_marine.groupby('Year').apply(lambda x: x['Violation'].sum() / x['Violation'].count())
+Traceback (most recent call last):
+  File "/Users/eylai/Projects/llm-baseline/reference_systems/../sys_outputs/one_shot/environment-hard-1/_intermediate/pipeline-0.py", line 69, in <module>
+    pearson_corr, _ = pearsonr(average_JJA_Sep, exceedance_rates.loc[input_years])
+  File "/Users/eylai/Projects/llm-baseline/.venv/lib/python3.10/site-packages/scipy/stats/_stats_py.py", line 4552, in pearsonr
+    raise ValueError('`x` and `y` must have length at least 2.')
+ValueError: `x` and `y` must have length at least 2.

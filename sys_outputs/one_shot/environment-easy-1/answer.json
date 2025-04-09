@@ -2,21 +2,25 @@
     {
         "id": "environment-easy-1",
         "query": "In 2018, how many bacterial exceedances were observed in freshwater beaches?",
-        "data_sources": ["water-body-testing-2018.csv", "precipitations_beaches_community.csv"]
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": 375
     },
     {
         "id": "environment-easy-1-1",
-        "query": "Which column indicates a bacterial exceedance?",
-        "data_sources": ["water-body-testing-2018.csv"]
+        "query": "What records in 2018 are related to freshwater beaches?",
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": 7641
     },
     {
         "id": "environment-easy-1-2",
-        "query": "Which rows correspond to freshwater beaches?",
-        "data_sources": ["water-body-testing-2018.csv"]
-    },
-    {
-        "id": "environment-easy-1-3",
-        "query": "Which rows are from the year 2018?",
-        "data_sources": ["water-body-testing-2018.csv"]
+        "query": "Which of the freshwater beach records indicate bacterial exceedance?",
+        "data_sources": [
+            "water-body-testing-2018.csv"
+        ],
+        "answer": 375
     }
 ]

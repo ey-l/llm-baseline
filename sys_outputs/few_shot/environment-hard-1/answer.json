@@ -28,7 +28,7 @@
             "water-body-testing-2019.csv",
             "water-body-testing-2018.csv"
         ],
-        "answer": NaN
+        "answer": null
     },
     {
         "id": "environment-hard-1-1",

@@ -172,7 +172,7 @@ class BaselineLLM:
         print(f"Prompt saved to {prompt_fp}")
         return prompt
 
-    def extract_response(self, question, response, try_number:int):
+    def extract_response(self, response, try_number:int):
         """
         Process the LLM response.
         :param response: LLM response string
@@ -208,7 +208,7 @@ class BaselineLLM:
 
         return json_fp, code_fp
 
-    def execute_code(self, question, code_fp, try_number:int):
+    def execute_code(self, code_fp, try_number:int):
         """
         Execute the code in the file and save the output.
         :param code_fp: Path to the code file
@@ -235,7 +235,7 @@ class BaselineLLM:
 
         return output_fp, error_fp
     
-    def process_response(self, json_fp, output_fp, error_fp):
+    def process_response(self, json_fp, output_fp):
         """
         Process the response and fill in the JSON response with the execution result.
         :param question: Question object
@@ -292,10 +292,10 @@ class BaselineLLM:
         print("Response:", response)
 
         # Process the response
-        json_fp, code_fp = self.extract_response(question, response, try_number=0)
+        json_fp, code_fp = self.extract_response(response, try_number=0)
 
         # Execute the code (if necessary)
-        output_fp, error_fp = self.execute_code(question, code_fp, try_number=0)
+        output_fp, error_fp = self.execute_code(code_fp, try_number=0)
         # print("Execution Result:", result)
 
         # Check if errors were generated
@@ -305,7 +305,7 @@ class BaselineLLM:
             print(f"** ERRORS ** found in {error_fp}. Skipping JSON update.")
         else:
             # Fill in JSON response with the execution result
-            self.process_response(json_fp, output_fp, error_fp)
+            self.process_response(json_fp, output_fp)
 
         return response
     
@@ -332,18 +332,18 @@ class BaselineLLM:
 
             # Process the response
             if try_number == 0:
-                json_fp, code_fp = self.extract_response(question, response, try_number)
-            else: _, code_fp = self.extract_response(question, response, try_number)
+                json_fp, code_fp = self.extract_response(response, try_number)
+            else: _, code_fp = self.extract_response(response, try_number)
 
             # Execute the code (if necessary)
-            output_fp, error_fp = self.execute_code(question, code_fp, try_number)
+            output_fp, error_fp = self.execute_code(code_fp, try_number)
             # print("Execution Result:", result)
 
             if os.path.getsize(error_fp) > 0:
                 prompt = self.generate_error_handling_prompt(code_fp, error_fp)
             else:
                 # Fill in JSON response with the execution result
-                self.process_response(json_fp, output_fp, error_fp)
+                self.process_response(json_fp, output_fp)
                 break
 
         return response
@@ -378,7 +378,7 @@ def main(question_json_fp:str = None, data_dir:str = None, output_dir:str = None
         print(question)
         response = baseline_system.run_one_shot(output_dir, question)
         print("\n" + "="*50 + "\n")
-        response = baseline_system.run_few_shot(output_dir, question)
+        #response = baseline_system.run_few_shot(output_dir, question)
         print("\n" + "="*50 + "\n")
 
 if __name__ == "__main__":

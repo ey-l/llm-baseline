@@ -1,26 +1,25 @@
 import pandas as pd
 import json
 
-def count_exceedances(file_path, year, beach_type, violation_col='Violation', beach_type_col='Beach Type Description'):
-    # Load the dataset
-    data = pd.read_csv(file_path)
+# Load the dataset for water body testing in 2018
+file_path = '/Users/eylai/Projects/llm-baseline/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2018.csv'
+data_2018 = pd.read_csv(file_path)
 
-    # Filter for the desired year
-    data['Year'] = data['Year'].astype(str)
-    year_data = data[data['Year'] == str(year)]
+# Filter the data to get records only from freshwater beaches
+freshwater_2018 = data_2018[(data_2018['Year'] == 2018) & (data_2018['Beach Type Description'] == 'Fresh')]
 
-    # Further filter for the desired beach type
-    fresh_beach_data = year_data[year_data[beach_type_col] == beach_type]
+# Further filter the records to find out the exceedances
+exceedances_2018 = freshwater_2018[freshwater_2018['Violation'].str.lower() == 'yes']
 
-    # Count the exceedances
-    exceedances = fresh_beach_data[violation_col].str.lower() == 'yes'
+# Get the count of bacterial exceedances
+bacterial_exceedances_count_2018 = len(exceedances_2018)
 
-    return exceedances.sum()
+# Prepare the answer dictionary
+answers = {
+    "environment-easy-1-1": len(freshwater_2018),
+    "environment-easy-1-2": len(exceedances_2018),
+    "environment-easy-1": bacterial_exceedances_count_2018
+}
 
-# Define file paths
-water_body_testing_2018_file = '/Users/eylai/Projects/llm-baseline/reference_systems/../../LLMBenchmark/data/environment/water-body-testing-2018.csv'
-
-# Get the number of bacterial exceedances for freshwater beaches in 2018
-number_of_exceedances = count_exceedances(water_body_testing_2018_file, 2018, 'Fresh')
-
-print(number_of_exceedances)
+# Print the answers
+print(json.dumps(answers, indent=4))
